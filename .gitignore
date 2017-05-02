@@ -1,5 +1,10 @@
-/LeBonDZ/build/*
-/LeBonDZ/.gradle/*
-/LeBonDZ/.classpath
-/LeBonDZ/.project
-/LeBonDZ/.settings/*
+LeBonDZ/build/*
+LeBonDZ/.settings/*
+LeBonDZ/.gradle/3.4/*
+LeBonDZ/.project
+LeBonDZ/.classpath
+LeBonDZ/.classpath
+LeBonDZ/.settings/org.eclipse.jdt.core.prefs
+LeBonDZ/.gradle/3.4/taskHistory/taskHistory.lock
+*.bin
+LeBonDZ/.gradle/3.4/taskHistory/fileHashes.bin
