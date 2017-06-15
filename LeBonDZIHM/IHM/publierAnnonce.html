@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body onload = "chargementPage(); recupererListeCategories();">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -45,16 +45,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li id ="indexButton">
                         <a href="index.html">Accueil</a>
                     </li>
-                    <li>
+                    <li id ="announcesButton">
                         <a href="parcourirAnnonces.html">Annonces</a>
                     </li>
-                    <li>
+                    <li id ="inscriptionButton">
                         <a href="inscription.html">Inscription</a>
                     </li>
-                    <li>
+                    <li id ="connexionButton">
                         <a href="connexion.html">Connexion</a>
                     </li>
                 </ul>
@@ -75,7 +75,7 @@
         </div>
         <!-- /.row -->
 		
-        <div class="row">
+        <div class="row" id="publishBloc">
 			<form>
 			  <div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
@@ -92,7 +92,17 @@
 				<input id="contenu" type="text" class="form-control" name="contenu" placeholder="Contenu">
 			  </div>
 			  <br>
-			  <input id="submit" type="submit" class="btn btn-success" name="submit" value="Publier">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <input id="ville" type="text" class="form-control" name="ville" placeholder="Ville">
+              </div>
+              <br>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-money"></i></span>
+                <input id="prix" type="text" class="form-control" name="prix" placeholder="Prix">
+              </div>
+              <br>
+			  <input id="submit" type="submit" class="btn btn-success" name="submit" value="Publier" onclick="publierAnnonce();">
 			</form>
 
         </div>

@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body onload = "chargementPage(); consulterAnnonce();">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -45,16 +45,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li id ="indexButton">
                         <a href="index.html">Accueil</a>
                     </li>
-                    <li>
+                    <li id ="announcesButton">
                         <a href="parcourirAnnonces.html">Annonces</a>
                     </li>
-                    <li>
+                    <li id ="inscriptionButton">
                         <a href="inscription.html">Inscription</a>
                     </li>
-                    <li>
+                    <li id ="connexionButton">
                         <a href="connexion.html">Connexion</a>
                     </li>
                 </ul>
@@ -77,7 +77,7 @@
         </div>
         <!-- /.row -->
 		
-		<div class="row">
+		<div class="row" id = "announceBloc">
 			<h3>Annonce</h3>
 			<h4>Sous-titre</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>

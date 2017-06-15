@@ -25,8 +25,7 @@
 
 </head>
 
-<body>
-
+<body onload = "chargementPage(); recupererAnnonces(); recupererListeCategories();">
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -45,16 +44,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li id ="indexButton">
                         <a href="index.html">Accueil</a>
                     </li>
-                    <li>
+                    <li id ="announcesButton">
                         <a href="parcourirAnnonces.html">Annonces</a>
                     </li>
-                    <li>
+                    <li id ="inscriptionButton">
                         <a href="inscription.html">Inscription</a>
                     </li>
-                    <li>
+                    <li id ="connexionButton">
                         <a href="connexion.html">Connexion</a>
                     </li>
                 </ul>
@@ -77,7 +76,7 @@
         </div>
         <!-- /.row -->
 		
-        <div class="row">
+        <div class="row" id="publishAnnounceBloc">
 			<a class="btn btn-success" href="publierAnnonce.html"><h4>Publier une annonce <span class="glyphicon glyphicon-chevron-right"></span></h4></a>
 		</div>
 		
@@ -94,7 +93,11 @@
 				  <br>
 				  <div class="input-group">
 					<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
-					<input id="categorie" type="text" class="form-control" name="categorie" placeholder="Catégorie">
+                    <select id="categorie" type="text" class="form-control" name="categorie" placeholder="Catégorie">
+                      <option value="1">Service</option> 
+                      <option value="2">Bien</option>
+                      <option value="3">Immobilier</option>
+                    </select>
 				  </div>
 				  <br>
 				  <div class="input-group">
@@ -106,57 +109,58 @@
         </div>
 
         <hr>
-		
-		<div class="row">
-			<h3>Annonce 1</h3>
-			<h4>Sous-titre</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
+		<div class="row" id="announcesBloc">
+    		<div class="row">
+    			<h3>Annonce 1</h3>
+    			<h4>Sous-titre</h4>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+    			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
 
-        <hr>
-		
-		<div class="row">
-			<h3>Annonce 1</h3>
-			<h4>Sous-titre</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
+            <hr>
+    		
+    		<div class="row">
+    			<h3>Annonce 1</h3>
+    			<h4>Sous-titre</h4>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+    			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
 
-        <hr>
+            <hr>
 
-        <div class="row">
-			<h3>Annonce 2</h3>
-			<h4>Sous-titre</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
+            <div class="row">
+    			<h3>Annonce 2</h3>
+    			<h4>Sous-titre</h4>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+    			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
 
-        <hr>
+            <hr>
 
-        <div class="row">
-			<h3>Annonce 3</h3>
-			<h4>Sous-titre</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
+            <div class="row">
+    			<h3>Annonce 3</h3>
+    			<h4>Sous-titre</h4>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+    			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
 
-        <hr>
-		
-        <div class="row">
-			<h3>Annonce 4</h3>
-			<h4>Sous-titre</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
+            <hr>
+    		
+            <div class="row">
+    			<h3>Annonce 4</h3>
+    			<h4>Sous-titre</h4>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+    			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
 
-        <hr>
+            <hr>
 
-        <div class="row">
-			<h3>Annonce 5</h3>
-			<h4>Sous-titre</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <div class="row">
+    			<h3>Annonce 5</h3>
+    			<h4>Sous-titre</h4>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+    			<a class="btn btn-success" href="consulterAnnonce.html">Voir détails <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
         </div>
         
     </div>
